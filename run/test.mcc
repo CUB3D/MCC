@@ -1,12 +1,10 @@
-.instructionWidth 24
-
 ; Bootstrap instruction
 mov PC, ML
 mov RAM, IR
 
 ; TODO support mov [PC], IR
-
-.fill 0x0001000
+; TODO support padding to position based on current loc
+.fill 0xF
 ; Read RAM to A
 mov IR, ML
 mov RAM, A
@@ -15,7 +13,7 @@ inc PC
 mov PC, ML
 mov RAM, IR
 
-.fill 0x0010000
+.fill 0xB
 ; Read RAM to B
 mov IR, ML
 mov RAM, B
@@ -24,7 +22,7 @@ inc PC
 mov PC, ML
 mov RAM, IR
 
-.fill 0x0001100
+.fill 0xC
 ; Read ALU to A
 mov ALU, A
 inc PC

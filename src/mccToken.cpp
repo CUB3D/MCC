@@ -2,7 +2,7 @@
 // Created by cub3d on 06/01/19.
 //
 
-#include "MccToken.h"
+#include "mccToken.h"
 
 mccToken::mccToken(mccState type) : tokenType(type) {}
 

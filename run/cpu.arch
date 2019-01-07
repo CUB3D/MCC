@@ -1,8 +1,30 @@
 {
-    "Registers": {
-        "A": {
-            "ReadBit": 0x00000200,
-            "WriteBit": 0x00000080
-        }
+  "Registers": {
+    "ALU": {
+      "ReadBit": "00002000"
+    },
+    "A": {
+      "ReadBit": "00000200",
+      "WriteBit": "00000080"
+    },
+    "B": {
+      "WriteBit": "00000004"
+    },
+    "ML": {
+      "ReadBit": "00000008",
+      "WriteBit": "00000004"
+    },
+    "PC": {
+      "ReadBit": "00000001",
+      "IncrementBit": "00000002"
+    },
+    "IR": {
+      "ReadBit": "00001000",
+      "WriteBit": "00000040"
+    },
+    "RAM": {
+      "ReadBit": "00000010",
+      "WriteBit": "00000020"
     }
+  }
 }
