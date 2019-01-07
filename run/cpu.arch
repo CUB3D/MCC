@@ -1,0 +1,8 @@
+{
+    "Registers": {
+        "A": {
+            "ReadBit": 0x00000200,
+            "WriteBit": 0x00000080
+        }
+    }
+}

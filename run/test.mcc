@@ -1,0 +1,33 @@
+.instructionWidth 24
+
+; Bootstrap instruction
+mov PC, ML
+mov RAM, IR
+
+; TODO support mov [PC], IR
+
+.fill 0x0001000
+; Read RAM to A
+mov IR, ML
+mov RAM, A
+inc PC
+; TODO support bracket syntax
+mov PC, ML
+mov RAM, IR
+
+.fill 0x0010000
+; Read RAM to B
+mov IR, ML
+mov RAM, B
+inc PC
+; TODO support bracket syntax
+mov PC, ML
+mov RAM, IR
+
+.fill 0x0001100
+; Read ALU to A
+mov ALU, A
+inc PC
+; TODO support bracket syntax
+mov PC, ML
+mov RAM, IR
