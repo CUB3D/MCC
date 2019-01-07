@@ -1,0 +1,22 @@
+language: cpp
+compiler: gcc
+matrix:
+    include:
+        - os: linux
+          addons:
+              apt:
+                  sources:
+                      - ubuntu-toolchain-r-test
+                      - george-editson55-precise-backports
+                  packages:
+                      - g++-8
+                      - cmake
+                      - cmake-data
+          env:
+              - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+
+    before_install:
+        - eval "${MATRIX_EVAL}"
+
+
+script: mkdir build && cd build && cmake -DCMAKE_C_COMPILER=`which gcc-8` -DCMAKE_CXX_COMPILER=`which g++-8` .. && make
