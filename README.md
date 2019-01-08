@@ -16,7 +16,8 @@ Output formats currently available
 
 Example program
 ---
-```; Bootstrap instruction
+```
+; Bootstrap instruction
 mov PC, ML
 mov RAM, IR
 
@@ -46,7 +47,8 @@ mov RAM, IR
 
 Example output
 ---
-```v2.0 raw
+```
+v2.0 raw
 5 50 15*0 1004 90 2 5 50 11*0
 1004 14 2 5 50 12*0 2080 2 5
 50
@@ -56,7 +58,8 @@ ISA
 ---
 Machine code generation requires a valid ISA configuration, which sepcifies information such as the available registers,
 the control bits and instruction timing. ISAs are specified in JSON, like the following example.
-```{
+```
+{
   "Registers": {
     "ALU": {
       "ReadBit": "00002000"
